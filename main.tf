@@ -25,12 +25,12 @@ resource "azurerm_resource_group" "rg-2" {
 }
 
 
-resource "azurerm_virtual_network" "vnet"{
+resource "azurerm_virtual_network" "vnet" {
   name                = "my-vnet"
   location            = azurerm_resource_group.rg-2.location
   resource_group_name = azurerm_resource_group.rg-2.name
   address_space       = ["10.0.0.0/16"]
-  
+
 
   subnet {
     name             = "subnet1"
